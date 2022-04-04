@@ -1,47 +1,64 @@
-# curriculum-databases-projects-template
+# Vet-clinic
 
-> This template should be used for database related projects at Microverse.
-> Generate your own repository, update this README and edit all files content while working on projects. You should not be adding any new files unless asked otherwise.
+This project focuses on using relational database to create data structures for a Veterinary Clinic, keeping records of the animals, animals' owners, clinic employees and visits Tables.
 
+## Built With
 
-## Getting Started
+- SQL (PostgreSQL)
 
-This repository includes files with plain SQL that can be used to recreate a database:
+## Getting started
 
-- Use [schema.sql](./schema.sql) to create all tables.
-- Use [data.sql](./data.sql) to populate tables with sample data.
-- Check [queries.sql](./queries.sql) for examples of queries that can be run on a newly created database. **Important note: this file might include queries that make changes in the database (e.g., remove records). Use them responsibly!**
+1. [Installing PostgreSQL](https://www.postgresql.org/download/)
 
+To get a local copy up and running, download the zip file or follow the steps below by running these commands in your command line.
+
+~~~bash
+git clone https://github.com/zieeco/vet-clinic-database.git
+~~~
+
+Navigate to the location of the folder in your machine:
+
+ ~~~bash
+ cd vet-clinic-database
+ ~~~
+
+- For Linux users, Run the following commands in your terminal
+
+1. Login to postgres `sudo su postgres`
+2. create your database `createdb <databeName>`
+3. Open your postgres terminal `psql`, you should be logged in as
+```sql
+postgres=#
+```
+4. Connect to your database.
+    ```
+    postgres=# \c <databaseName>
+    You are now connected to database "<databaseName>" as user "postgres".
+    <databaseName>=#
+    ```
+5. From here you can add tables of your choice, etc.
 
 ## Authors
 
-👤 **Author1**
+👤 **zieeco**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@Zieeco](https://github.com/zieeco)
+- Twitter [@zieecodes](https://twitter.com/zieecodes)
+- LinkedIn: [Isaac Imaobong Samuel](https://www.linkedin.com/in/isaac-imaobong-samuel)
 
-👤 **Author2**
+## Credit
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- [Project Template](https://github.com/microverseinc/curriculum-template-databases) from [Microverse](https://bit.ly/MicroverseTN) RUBY / DATABASES AND INTERVIEWING module.
 
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](../../issues/).
+Feel free to check the [issues page](https://github.com/zieeco/vet-clinic-database/issues).
 
 ## Show your support
 
 Give a ⭐️ if you like this project!
-
-## Acknowledgments
-
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
 
 ## 📝 License
 
