@@ -57,7 +57,7 @@ SELECT species, ROUND(AVG(escape_attempts)::numeric, 0) FROM animals WHERE date_
 -- What animals belong to Melody Pond?
 SELECT name FROM animals JOIN owners ON animals.owner_id = owners.id WHERE owners.full_name = 'Melody Pond';
 -- List of all animals that are pokemon (their type is Pokemon).
-SELECT Animal, Species FROM (SELECT animals.name AS Animal, species.name as Species FROM animals, species WHERE animals.species_id = species.id) _ WHERE Species = 'Pokemon';
+SELECT A.name As Animal, B.name As Species FROM animals A JOIN species B ON A.species_id = B.id WHERE B.name = 'Pokemon';
 -- List all owners and their animals, remember to include those that don't own any animal.
 SELECT owners.full_name, animals.name FROM owners LEFT JOIN animals ON owners.id = animals.owner_id;
 -- How many animals are there per species?
