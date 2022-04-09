@@ -32,10 +32,10 @@ ALTER TABLE animals ADD COLUMN owner_id INT REFERENCES owners(id);
 
 -- Creating a table named vets with the following columns:
 CREATE TABLE vets (
-    id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    id SERIAL PRIMARY KEY,
     name varchar(100) NOT NULL,
-    age INT,
-    date_of_graduation date
+    age INT NOT NULL,
+    date_of_graduation date NOT NULL
 );
 
 -- Joining Table for vets & species table: 🥶
@@ -48,11 +48,13 @@ CREATE TABLE specializations (
 );
 
 -- Joining Table for animals & vets table: 🥶
+DROP TABLE visits;
+
 CREATE TABLE visits (
+    id SERIAL PRIMARY KEY,
     animals_id INT NOT NULL,
     vets_id INT NOT NULL,
     date_of_visit date,
     FOREIGN KEY (animals_id) REFERENCES animals(id) ON DELETE RESTRICT ON UPDATE CASCADE,
-    FOREIGN KEY (vets_id) REFERENCES vets(id) ON DELETE RESTRICT ON UPDATE CASCADE,
-    PRIMARY KEY (animals_id, vets_id)
+    FOREIGN KEY (vets_id) REFERENCES vets(id) ON DELETE RESTRICT ON UPDATE CASCADE
 );
